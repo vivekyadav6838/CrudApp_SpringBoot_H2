@@ -58,7 +58,7 @@ return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     return  new ResponseEntity<>(bookobj,HttpStatus.OK);
     }
 
-    @PostMapping("/updateBookById/{id}")
+    @PutMapping("/updateBookById/{id}")
     public  ResponseEntity<Book> updateBookById(@PathVariable Long id,@RequestBody Book newBookData)
     {
        Optional<Book> oldBookData= bookRepo.findById(id);
